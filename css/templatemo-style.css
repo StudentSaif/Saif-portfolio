@@ -289,7 +289,7 @@ header .social-icon li a {
 
 /* end home */
 
-/* start about */
+/* Start About */
 #about .media-heading-wrapper {
 	padding-bottom: 32px;
 }
@@ -310,11 +310,36 @@ header .social-icon li a {
 #about .media-heading-wrapper h3 {
 	font-size: 18px;
 	font-weight: bold;
-	/* padding-top: 20px; */
 	padding-left: 52px;
 }
 
-/* end about */
+/* Add margin-bottom to separate sections on mobile */
+@media (max-width: 767px) {
+	#about .media {
+		margin-bottom: 30px;
+		/* Increase spacing between stacked divs */
+	}
+
+	#about .col-xs-12 {
+		margin-bottom: 40px;
+		/* Extra bottom space for each column */
+	}
+}
+
+/* End About */
+
+
+/* Ensure uniform size for team images */
+#team .team-wrapper img {
+	width: 100%;
+	/* Ensures responsiveness */
+	height: 250px;
+	/* Set a fixed height */
+	object-fit: cover;
+	/* Crop images to fit the container while maintaining aspect ratio */
+	display: block;
+	/* Remove any extra spacing below images */
+}
 
 /* start team */
 #team .team-wrapper {
@@ -333,6 +358,8 @@ header .social-icon li a {
 
 #team .team-wrapper .team-des {
 	padding: 20px;
+	text-align: center;
+	/* Center-align text */
 }
 
 #team .team-wrapper .team-des span {
@@ -344,9 +371,10 @@ header .social-icon li a {
 
 /* end team */
 
+
 /* start service */
 #service .col-md-4 {
-	padding: 40px;
+	padding: 20px;
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
