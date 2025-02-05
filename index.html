@@ -26,7 +26,7 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/custom.js"></script>
 	<style>
-		.resumebtn {
+		.allBtn {
 			color: white;
 			/* Default text color */
 			text-decoration: none;
@@ -38,10 +38,15 @@
 			margin-bottom: 20px;
 		}
 
-		.resumebtn:hover {
+		.allBtn:hover,
+		.allBtn:focus,
+		.allBtn:active {
 			color: rgb(40, 167, 233);
 			/* Color change on hover */
 			text-decoration: none;
+			/* Ensure no underline on hover, focus, or click */
+			outline: none;
+			/* Remove outline if necessary */
 		}
 	</style>
 </head>
@@ -68,7 +73,7 @@
 					<p>
 						<i class="fa fa-phone"></i>
 						<span>:</span>
-						<a href="tel:+919170055886"><strong>+91</strong> 9170055886</a>
+						<a href="tel:+919170055886" class="allBtn"><strong>+91</strong> 9170055886</a>
 					</p>
 				</div>
 
@@ -76,7 +81,7 @@
 					<p class="contact-info">
 						<i class="fa fa-envelope-o"></i>
 						<span>:</span>
-						<a href="mailto:Engineersaifibrahim@gmail.com">Engineersaifibrahim@gmail.com</a>
+						<a href="mailto:Engineersaifibrahim@gmail.com" class="allBtn">Engineersaifibrahim@gmail.com</a>
 					</p>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -84,10 +89,10 @@
 						<li><span>Meet us on</span></li>
 						<li><a href="https://www.facebook.com/profile.php?id=100017326236031" class="fa fa-facebook"
 								target="_blank"></a></li>
-						<li><a href="#" class="fa fa-twitter"></a></li>
+						<!-- <li><a href="#" class="fa fa-twitter"></a></li> -->
 						<li><a href="https://www.instagram.com/0_s_a_i_f_k_h_a_n/" target="_blank"
 								class="fa fa-instagram"></a></li>
-						<!-- <li><a href="#" class="fa fa-apple"></a></li> -->
+						<li><a href="https://github.com/StudentSaif" target="_blank" class="fa fa-github"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -152,56 +157,6 @@
 
 
 	<!-- start about -->
-	<!-- <section id="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">WE ARE <span>WEB
-							INNOVATORS</span></h2>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
-					<div class="media">
-						<div class="media-heading-wrapper">
-							<div class="media-object pull-left"> <i class="fa fa-database"></i> </div>
-							<h3 class="media-heading">POWERFUL DATABASE SOLUTIONS</h3>
-						</div>
-						<div class="media-body">
-							<p>We specialize in robust database architectures, leveraging the power of MySQL and MongoDB
-								to ensure seamless data management and high-performance applications. From structured to
-								NoSQL databases, we optimize efficiency and scalability.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-offset="50" data-wow-delay="0.9s">
-					<div class="media">
-						<div class="media-heading-wrapper">
-							<div class="media-object pull-left"> <i class="fa fa-code"></i> </div>
-							<h3 class="media-heading">CUTTING-EDGE BACKEND DEVELOPMENT</h3>
-						</div>
-						<div class="media-body">
-							<p>Building the backbone of digital platforms with PHP frameworks like Laravel, OpenCart,
-								and CodeIgniter. Our backend solutions ensure security, speed, and scalability, making
-								every application robust and future-ready.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
-					<div class="media">
-						<div class="media-heading-wrapper">
-							<div class="media-object pull-left"> <i class="fa fa-desktop"></i> </div>
-							<h3 class="media-heading">NEXT-GEN FRONTEND TECHNOLOGIES</h3>
-						</div>
-						<div class="media-body">
-							<p>Crafting visually stunning and highly interactive user experiences with HTML5, CSS3, and
-								React.js. We transform ideas into seamless digital interfaces that engage users and
-								drive innovation.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
 	<section id="about">
 		<div class="container">
 			<div class="row">
@@ -270,55 +225,65 @@
 	<section id="team">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>OUR</span> TEAM</h2>
+				<div class="col-md-12 text-center">
+					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+						<span>OUR</span> TEAM
+					</h2>
 				</div>
+
+				<!-- Team Member 1 - Saif Ibrahim -->
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
 					<div class="team-wrapper">
-						<img src="images/SAIF_PHOTO.jpeg" class="img-responsive" alt="team img 1">
+						<img src="images/SAIF_PHOTO.jpeg" class="img-responsive" alt="Saif Ibrahim">
 						<div class="team-des">
 							<h4>SAIF IBRAHIM</h4>
-							<span>FULL STACK DEVELOPER</span>
-							<a href="images/SAIF-IBRAHIM--resume.pdf" target="_blank" class="resumebtn">Resume</a>
-							<p>A visionary full-stack developer who blends frontend elegance with backend power. Saif
+							<span>BACKEND DEVELOPER</span>
+							<a href="images/SAIF-IBRAHIM--resume.pdf" target="_blank" class="allBtn">Resume</a>
+							<p>A visionary developer who blends frontend elegance with backend power. Saif
 								expertly crafts high-performance and scalable web solutions, transforming ideas into
 								seamless and dynamic digital experiences with innovation at their core.</p>
 						</div>
 					</div>
 				</div>
+
+				<!-- Team Member 2 - Abhigyan Gupta -->
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
 					<div class="team-wrapper">
-						<img src="images/abhi-img.JPG" class="img-responsive" alt="team img 2">
+						<img src="images/abhi-img-2.jpg" class="img-responsive" alt="Abhigyan Gupta">
 						<div class="team-des">
 							<h4>ABHIGYAN GUPTA</h4>
 							<span>PHOTOGRAPHER</span>
-							<a href="images/SAIF-IBRAHIM--resume.pdf" target="_blank" class="resumebtn">Resume</a>
+							<a href="images/ABHIGYAN-RESUME.pdf" target="_blank" class="allBtn">Resume</a>
 							<p>An artist behind the lens, Abhigyan captures moments that tell compelling stories. With
 								an impeccable eye for detail and composition, he transforms ordinary scenes into
 								breathtaking visual narratives, ensuring every image speaks a thousand words.</p>
 						</div>
 					</div>
 				</div>
+
+				<!-- Team Member 3 - Arvind Singh -->
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
 					<div class="team-wrapper">
-						<img src="images/arvind-image-2.jpg" class="img-responsive" alt="team img 3">
+						<img src="images/arvind-image-2.jpg" class="img-responsive" alt="Arvind Singh">
 						<div class="team-des">
 							<h4>ARVIND SINGH</h4>
 							<span>BACKEND DEVELOPER</span>
-							<a href="images/Arvind-Kumar.pdf" target="_blank" class="resumebtn">Resume</a>
+							<a href="images/Arvind-Kumar.pdf" target="_blank" class="allBtn">Resume</a>
 							<p>A backend wizard who builds robust, scalable, and secure server-side applications. Arvind
 								specializes in database management, API development, and system architecture, ensuring
 								that every digital product runs smoothly and efficiently under the hood.</p>
 						</div>
 					</div>
 				</div>
+
+				<!-- Team Member 4 - Mohd Anas -->
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
 					<div class="team-wrapper">
-						<img src="images/anas-img.jpeg" class="img-responsive" alt="team img 4">
+						<img src="images/anas-img.jpeg" class="img-responsive" alt="Mohd Anas">
 						<div class="team-des">
 							<h4>MOHD ANAS</h4>
 							<span>FULL STACK DEVELOPER</span>
-							<a href="images/ANAS-RESUME.pdf" target="_blank" class="resumebtn">Resume</a>
+							<a href="images/ANAS-RESUME.pdf" target="_blank" class="allBtn">Resume</a>
 							<p>From intuitive UI designs to powerful backend logic, Anas excels at creating seamless and
 								dynamic web experiences. With expertise in multiple frameworks and modern technologies,
 								he transforms ideas into feature-rich applications that users love.</p>
@@ -328,57 +293,10 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- end team -->
 
 	<!-- start service -->
-	<!-- <section id="service">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">OUR <span>AWESOME</span> THINGS
-					</h2>
-				</div>
-				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
-					<i class="fa fa-laptop"></i>
-					<h4>Custom Web Development</h4>
-					<p>Building dynamic, responsive, and high-performance websites tailored to your needs. From sleek
-						frontend designs to robust backend systems, we craft seamless digital experiences that drive
-						engagement and growth.</p>
-				</div>
-				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
-					<i class="fa fa-cloud"></i>
-					<h4>Database Architecture & Management</h4>
-					<p>Efficiently structuring, managing, and optimizing databases in MySQL, MongoDB, and beyond. We
-						ensure data integrity, security, and scalability for your applications.</p>
-				</div>
-				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
-					<i class="fa fa-cog"></i>
-					<h4>Professional Photography & Visual Storytelling</h4>
-					<p>Capturing stunning visuals that breathe life into your brand. Our photography services focus on
-						creativity, storytelling, and high-quality imagery to make lasting impressions.</p>
-				</div>
-				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
-					<i class="fa fa-cloud"></i>
-					<h4>Mobile App Development</h4>
-					<p>Transforming ideas into feature-rich mobile applications. We develop intuitive and scalable apps
-						for both Android and iOS, ensuring seamless user experiences.</p>
-				</div>
-				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
-					<i class="fa fa-cog"></i>
-					<h4>UI/UX Strategy & Design</h4>
-					<p>Creating visually stunning and user-friendly designs that enhance engagement and usability. Our
-						approach blends creativity with functionality for intuitive digital experiences.</p>
-				</div>
-				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
-					<i class="fa fa-cloud"></i>
-					<h4>Digital Marketing & Brand Growth</h4>
-					<p>Strategic digital marketing solutions, including SEO, social media management, and targeted
-						advertising, to boost your online presence and connect with the right audience.</p>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
 	<section id="service">
 		<div class="container">
 			<div class="row">
@@ -552,31 +470,17 @@
 
 						<input type="submit" value="Send Message" class="form-control">
 					</form>
-
-					<!-- <form action="#" method="post" id="contactForm">
-						<label>NAME</label>
-						<input name="fullname" type="text" class="form-control" id="fullname">
-
-						<label>EMAIL</label>
-						<input name="email" type="email" class="form-control" id="email">
-
-						<label>MESSAGE</label>
-						<textarea name="message" rows="4" class="form-control" id="message"></textarea>
-
-						<input type="submit" class="form-control">
-					</form> -->
-
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
 					<address>
 						<p class="address-title">OUR ADDRESS</p>
 						<span>Near Awadh Bus Station, Kamta, Lucknow</span>
-						<p><i class="fa fa-phone"></i> <a href="tel:+919170055886">+91 9170055886</a></p>
+						<p><i class="fa fa-phone"></i> <a href="tel:+919170055886" class="allBtn">+91 9170055886</a></p>
 						<p><i class="fa fa-envelope-o"></i> <a
-								href="mailto:engineersaifibrahim@gmail.com">Engineersaifibrahim@gmail.com</a></p>
+								href="mailto:engineersaifibrahim@gmail.com" class="allBtn">Engineersaifibrahim@gmail.com</a></p>
 						<p><i class="fa fa-map-marker"></i>
 							<a href="https://www.google.com/maps/place/Hasangarden+Colony,+Kamta,+Lucknow,+Uttar+Pradesh+226028/@26.8788679,81.0194493,18z/data=!3m1!4b1!4m6!3m5!1s0x399be284d5253743:0xcf702b793b65a8bf!8m2!3d26.8788663!4d81.0203079!16s%2Fg%2F11g619c_s8?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
-								target="_blank">
+								target="_blank" class="allBtn">
 								Shankarpuri Colony, Lucknow
 							</a>
 						</p>
@@ -597,54 +501,19 @@
 	</section>
 	<!-- end contact -->
 
-	<!-- start copyright -->
+	<!-- Start Copyright -->
 	<footer id="copyright">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
-						Copyright &copy; 2025 TechNova</p>
+						Copyright &copy; 2025 TechNova
+					</p>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<!-- end copyright -->
-
-	<!-- javascript code for message redirect to email Begins -->
-	<!-- Include the latest EmailJS SDK -->
-	<!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
-
-	<!-- <script>
-		// Initialize EmailJS with the correct public key from your EmailJS account
-		(function () {
-			emailjs.init("E1lxuZKU9uAfFVdRp"); // Replace with your correct public key
-		})();
-
-		document.getElementById("contactForm").addEventListener("submit", function (event) {
-			event.preventDefault(); // Prevent form submission
-
-			// Get form values
-			var name = document.getElementById("fullname").value;
-			var email = document.getElementById("email").value;
-			var message = document.getElementById("message").value;
-
-			var templateParams = {
-				from_name: name,
-				from_email: email,
-				message: message
-			};
-
-			// Send the email using EmailJS with the correct service and template IDs
-			emailjs.send("service_boxy0wx", "template_3ads76f", templateParams)
-				.then(function (response) {
-					alert("Message sent successfully!");
-				}, function (error) {
-					console.log(error); // Log the error for debugging
-					alert("Failed to send message: " + JSON.stringify(error));
-				});
-		});
-	</script> -->
-	<!-- javascript code end -->
+	<!-- End Copyright -->
 
 </body>
 
